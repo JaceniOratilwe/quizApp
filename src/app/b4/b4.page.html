@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Brain Quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+        <ion-list>
+            <ion-radio-group >
+              <ion-list-header>
+                  <h3>How fast can information travel in your brain?</h3>
+              </ion-list-header>
+          
+              <ion-item>
+                  <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" name="b4"(click)="click1()" value="Up to 120 metres per second"> Up to 120 metres per second<br></ion-label>
+                </ion-item>
+              <ion-item>
+                  <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" name="b4"(click)="click2()" value="Up to 120 metre per minute"> Up to 120 metre per minute<br></ion-label><!--correct-->
+              </ion-item>
+              <ion-item>
+              <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" name="b4"(click)="click3()" value="Up to 120 metres per hour"> Up to 120 metres per hour<br></ion-label>
+                </ion-item>
+              <ion-item>
+                  <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" name="b4"(click)="click4()" value="None of the above">None of the above<br></ion-label>
+              </ion-item>
+            </ion-radio-group>
+    
+            <ion-item><ion-label><ion-button class="myaddto22" [disabled]="!yourSelectedRadioValue" (click)="GoTo4()"  shape="round" expand="full" color="secondary">Submit</ion-button><br></ion-label></ion-item>
+          </ion-list>
+        </div>
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>General Quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>  <div class="ion-padding">
+    <ion-list>
+        <ion-radio-group>
+          <ion-list-header>
+               <h3>Which is the largest planet in the solar system?</h3>
+          </ion-list-header>
+      
+          <ion-item>
+              <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click1()" name="Jupiter" value="Jupiter"> Jupiter<br></ion-label><!--correct Answer-->
+            </ion-item>
+          <ion-item>
+              <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click2()" name="Jupiter" value="Neptune"> Neptune<br></ion-label>
+          </ion-item>
+          <ion-item>
+          <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" name="Jupiter" (click)="click3()" value="Earth"> Earth<br></ion-label>
+            </ion-item>
+          <ion-item>
+              <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" name="Jupiter" (click)="click4()" value="Mars"> Mars<br></ion-label> 
+          </ion-item>
+        </ion-radio-group>
+
+        <ion-item><ion-label><ion-button class="myaddto22" [disabled]="!yourSelectedRadioValue" (click)="GoTo1()"  shape="round" expand="full" color="secondary">Submit</ion-button><br></ion-label></ion-item>
+      </ion-list></div>
+     
+</ion-content>

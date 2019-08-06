@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Brain Quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+    <a href="#">Back</a>
+
+    <div class="ion-padding">
+        <ion-list>
+            <ion-radio-group >
+              <ion-list-header>
+                  <h3>What does an average human brain weigh?</h3>
+              </ion-list-header>
+          
+              <ion-item>
+                  <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click1()" name="test" value="14 grams"> 14 grams<br></ion-label>
+                </ion-item>
+              <ion-item>
+                  <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click2()" name="test" value="1.4 grams"> 1.4 grams<br></ion-label><!--correct-->
+              </ion-item>
+              <ion-item>
+              <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click3()" name="test" value="1.4 kilograms"> 1.4 kilograms<br></ion-label>
+                </ion-item>
+              <ion-item>
+                  <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click4()" name="test" value="14 kilograms"> 14 kilograms<br></ion-label>
+              </ion-item>
+            </ion-radio-group>
+    
+            <ion-item><ion-label><ion-button class="myaddto22" [disabled]="!yourSelectedRadioValue" (click)="GoToQ1()"  shape="round" expand="full" color="secondary">Submit</ion-button><br></ion-label></ion-item>
+          </ion-list>
+          
+        </div>
+   
+</ion-content>

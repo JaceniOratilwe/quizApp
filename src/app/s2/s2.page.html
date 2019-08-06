@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-title>Science Quiz</ion-title>
+      </ion-toolbar>
+     
+</ion-header>
+
+<ion-content><div class="ion-padding">
+    <ion-list>
+        <ion-radio-group>
+          <ion-list-header>
+              <h3>Mycology is the study of:</h3>
+          </ion-list-header>
+      
+          <ion-item>
+              <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click1()" name="Mycology" value="Insects"> Insects<br></ion-label>
+            </ion-item>
+          <ion-item>
+              <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click2()" name="Mycology" value="Water bodies"> Water bodies<br></ion-label>
+          </ion-item>
+          <ion-item>
+          <ion-label> <input type="radio"  [(ngModel)]="yourSelectedRadioValue" (click)="click3()"name="Mycology" value="Fungi"> Fungi<br></ion-label><!--correct Answer-->
+            </ion-item>
+          <ion-item>
+              <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click4()" name="Mycology" value="Volcanos"> Volcanos<br></ion-label> 
+          </ion-item>
+        </ion-radio-group>
+
+        <ion-item><ion-label><ion-button class="myaddto22" [disabled]="!yourSelectedRadioValue"  (click)="GoTo3()" shape="round" expand="full" expand="full" color="secondary">Submit</ion-button><br></ion-label></ion-item>
+      </ion-list></div>
+</ion-content>

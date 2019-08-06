@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>General Quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <a href="#">Back</a>
+
+      <ion-list>
+          <ion-radio-group >
+            <ion-list-header>
+              <h3> What year did Albert Einstein die?</h3> 
+            </ion-list-header>
+        
+            <ion-item>
+                <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click1()" name="year" value="1954"> 1954<br></ion-label>
+              </ion-item>
+            <ion-item>
+                <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click2()" name="year" value="1949"> 1949<br></ion-label>
+            </ion-item>
+            <ion-item>
+            <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" name="year" (click)="click3()" value="1960"> 1960<br></ion-label>
+              </ion-item>
+            <ion-item>
+                <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" name="year" (click)="click4()" value="1955"> 1955<br></ion-label> <!--correct Answer-->
+            </ion-item>
+          </ion-radio-group>
+
+          <ion-item><ion-label><ion-button class="myaddto22" [disabled]="!yourSelectedRadioValue" (click)="GoToQ1()" shape="round" expand="full" color="secondary">Submit</ion-button><br></ion-label></ion-item>
+        </ion-list>
+     
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>General Quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+    <ion-list>
+        <ion-radio-group >
+          <ion-list-header>
+              <h3> How many Presidents have there been of the USA?  (Updated 2014)</h3>
+          </ion-list-header>
+      
+          <ion-item>
+              <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click1()" name="Presidents" value="36"> 36<br></ion-label>
+            </ion-item>
+          <ion-item>
+              <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click2()" name="Presidents" value="29"> 29<br></ion-label>
+          </ion-item>
+          <ion-item>
+          <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click3()" name="Presidents" value="46"> 46<br></ion-label>
+            </ion-item>
+          <ion-item>
+              <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click4()" name="Presidents" value="44"> 44<br></ion-label><!--correct-->
+          </ion-item>
+        </ion-radio-group>
+
+        <ion-item><ion-label><ion-button class="myaddto22" [disabled]="!yourSelectedRadioValue" (click)="GoTo3()"  shape="round" expand="full" color="secondary">Submit</ion-button><br></ion-label></ion-item>
+      </ion-list>
+    </div>
+
+   
+</ion-content>

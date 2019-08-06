@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>General Quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+        <ion-list>
+            <ion-radio-group >
+              <ion-list-header>
+                  <h3> What colour is Cerulean?</h3>
+              </ion-list-header>
+          
+              <ion-item>
+                  <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click1()"  name="colour" value="Red"> Red<br></ion-label>
+                </ion-item>
+              <ion-item>
+                  <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click2()"  name="colour" value="Blue"> Blue<br></ion-label><!--correct-->
+              </ion-item>
+              <ion-item>
+              <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click3()" name="colour" value="Yellow"> Yellow<br></ion-label>
+                </ion-item>
+              <ion-item>
+                  <ion-label> <input type="radio"  [(ngModel)]="yourSelectedRadioValue" (click)="click4()" name="colour" value="Green"> Green<br></ion-label>
+              </ion-item>
+            </ion-radio-group>
+    
+            <ion-item><ion-label><ion-button class="myaddto22" [disabled]="!yourSelectedRadioValue" (click)="GoTo4()"  shape="round" expand="full" color="secondary">Submit</ion-button><br></ion-label></ion-item>
+          </ion-list>
+        </div>
+       
+</ion-content>

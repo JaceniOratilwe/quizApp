@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-title>Science Quiz</ion-title>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+    <ion-list>
+        <ion-radio-group>
+          <ion-list-header>
+              <h3>Bronze is an alloy consisting of two or more metals. What are they?</h3>
+          </ion-list-header>
+      
+          <ion-item>
+              <ion-label> <input type="radio"[(ngModel)]="yourSelectedRadioValue" (click)="click1()" name="Bronze" value="Copper and zinc"> Copper and zinc<br></ion-label><!--correct Answer-->
+            </ion-item>
+          <ion-item>
+              <ion-label> <input type="radio"[(ngModel)]="yourSelectedRadioValue" (click)="click2()" name="Bronze" value="Copper and tin"> Copper and tin<br></ion-label>
+          </ion-item>
+          <ion-item>
+          <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue"(click)="click3()" name="Bronze" value="Copper and gold"> Copper and gold<br></ion-label>
+            </ion-item>
+          <ion-item>
+              <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue"(click)="click4()" name="Bronze" value="Copper and lead"> Copper and lead<br></ion-label> 
+          </ion-item>
+        </ion-radio-group>
+
+        <ion-item><ion-label><ion-button class="myaddto22" [disabled]="!yourSelectedRadioValue"  (click)="GoTo1()"  shape="round" expand="full" color="secondary">Submit</ion-button><br></ion-label></ion-item>
+      </ion-list>
+    </div>
+    <h3>{{ountdowntimer}}</h3>
+</ion-content>

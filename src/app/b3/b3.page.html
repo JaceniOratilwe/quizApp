@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Brain Quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+        <ion-list>
+            <ion-radio-group >
+              <ion-list-header>
+                  <h3>What is the total length of all the nerve fibres in your brain?</h3>
+              </ion-list-header>
+          
+              <ion-item>
+                  <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click1()"name="b3" value="1 to 2 kilometres"> 1 to 2 kilometres<br></ion-label>
+                </ion-item>
+              <ion-item>
+                  <ion-label> <input type="radio"  [(ngModel)]="yourSelectedRadioValue" (click)="click2()" name="b3"value="3000 to 5000 kilometres"> 3000 to 5000 kilometres<br></ion-label>
+              </ion-item>
+              <ion-item>
+              <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click3()" name="b3" value="150,000 to 180,000 kilometres"> 150,000 to 180,000 kilometres<br></ion-label><!--correct-->
+                </ion-item>
+              <ion-item>
+                  <ion-label> <input type="radio" [(ngModel)]="yourSelectedRadioValue" (click)="click4()" name="b3"value=">180,000 kilometres"> > 180,000 kilometres<br></ion-label>
+              </ion-item>
+            </ion-radio-group>
+    
+            <ion-item><ion-label><ion-button class="myaddto22" [disabled]="!yourSelectedRadioValue" (click)="GoTo4()"  shape="round" expand="full" color="secondary">Submit</ion-button><br></ion-label></ion-item>
+          </ion-list>
+        </div>
+</ion-content>
